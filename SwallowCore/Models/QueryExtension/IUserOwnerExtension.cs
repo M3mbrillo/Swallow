@@ -12,7 +12,7 @@ namespace SwallowCore.Models.QueryExtension
         public static IQueryable<TEntity> GetByCurrentUser<TEntity>(this IEnumerable<TEntity> userOwner) 
             where TEntity : IUserOwner
         {
-            return userOwner.Where(x => x.UserId == SwallowCore.Core.User.Id).AsQueryable();
-        }
+            return userOwner.Where(x => x.UserId == Core.User.Id).AsQueryable();
+        }        
     }
 }
